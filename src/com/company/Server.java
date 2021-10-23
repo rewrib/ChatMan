@@ -25,6 +25,8 @@ public class Server {
             String s = null;
 
             while ((s = reader.readLine()) != null) {
+                writer.write(s + System.lineSeparator());
+                writer.flush();
                 System.out.println("Empfangen vom Client: " + s);
             }
 
